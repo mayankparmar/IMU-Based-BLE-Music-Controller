@@ -1,4 +1,4 @@
-playlist: "/home/airadio/music_controller/playlist.xspf"
+playlist: "/home/pi/playlist.xspf"
 
 control_parameters:
   normalisation_factor: 100.0
