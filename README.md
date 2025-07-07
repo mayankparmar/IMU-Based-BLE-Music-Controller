@@ -147,5 +147,5 @@ Defines the maximum expected motion energy for scaling between 0 and 1.
 
 **Impact of Values**:
 - **Higher value**: Narrows the effective output range; motion needs to be more intense to reach full output.
-- **Lower value**: Expands sensitivity range; less motion can achieve full volume or tempo.
+- - **Lower value**: Expands sensitivity range; less motion can achieve full volume or tempo.
   
