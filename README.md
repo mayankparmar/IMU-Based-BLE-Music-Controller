@@ -98,7 +98,7 @@ output_values:
   min_tempo: 0.1
 ```
 
-### `smoothing_factor`
+- ### `smoothing_factor`
 
 **Purpose**:  
 This controls the weight given to recent motion energy versus past values. It’s used in exponential smoothing:
@@ -108,7 +108,7 @@ This controls the weight given to recent motion energy versus past values. It’
 - **Lower value** (closer to 0): More stable output; slower to respond to new movements.
 
 
-### `decay_rate`
+- ### `decay_rate`
 
 **Purpose**:  
 Controls how quickly the system "forgets" previous motion energy in the decay-based smoothing approach (if used instead of `smoothing_factor`). This is helpful if you want motion energy to fade when motion stops.
@@ -120,7 +120,7 @@ Controls how quickly the system "forgets" previous motion energy in the decay-ba
 > Note: The current implementation uses `smoothing_factor`. `decay_rate` is ignored unless explicitly used in the script instead.
 
 
-### `noise_floor`
+- ### `noise_floor`
 
 **Purpose**:  
 Eliminates tiny, meaningless orientation changes (e.g., sensor jitter or hand tremors) by setting a minimum threshold for motion energy.
@@ -130,7 +130,7 @@ Eliminates tiny, meaningless orientation changes (e.g., sensor jitter or hand tr
 - **Lower value**: Captures smaller movements; may react to unintentional noise.
 
 
-### `sensitivity`
+- ### `sensitivity`
 
 **Purpose**:  
 Controls how much the motion energy influences the output. It's a gain multiplier before scaling.
@@ -140,7 +140,7 @@ Controls how much the motion energy influences the output. It's a gain multiplie
 - **Lower value**: Requires bigger movements to trigger a response; system feels more "numb".
 
 
-### `normalisation_factor`
+- ### `normalisation_factor`
 
 **Purpose**:  
 Defines the maximum expected motion energy for scaling between 0 and 1.
