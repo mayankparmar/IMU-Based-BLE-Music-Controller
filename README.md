@@ -100,40 +100,40 @@ output_values:
 
 - ### `smoothing_factor`
 
-**Purpose**:  
-This controls the weight given to recent motion energy versus past values. It’s used in exponential smoothing:
+  **Purpose**:  
+  This controls the weight given to recent motion energy versus past values. It’s used in exponential smoothing:
 
-**Impact of Values**:
-- **Higher value** (closer to 1): Reacts faster to sudden motion; more jittery output.
-- **Lower value** (closer to 0): More stable output; slower to respond to new movements.
+  **Impact of Values**:
+  - **Higher value** (closer to 1): Reacts faster to sudden motion; more jittery output.
+  - **Lower value** (closer to 0): More stable output; slower to respond to new movements.
 
 
 - ### `decay_rate`
 
-**Purpose**:  
-Controls how quickly the system "forgets" previous motion energy in the decay-based smoothing approach (if used instead of `smoothing_factor`). This is helpful if you want motion energy to fade when motion stops.
+  **Purpose**:  
+  Controls how quickly the system "forgets" previous motion energy in the decay-based smoothing approach (if used instead of `smoothing_factor`). This is helpful if you want motion energy to fade when motion stops.
 
-**Impact of Values**:
-- **Higher value**: Past motion energy decays quickly; system resets quickly.
-- **Lower value**: Motion energy lingers; system takes longer to settle.
+  **Impact of Values**:
+  - **Higher value**: Past motion energy decays quickly; system resets quickly.
+  - **Lower value**: Motion energy lingers; system takes longer to settle.
 
-> Note: The current implementation uses `smoothing_factor`. `decay_rate` is ignored unless explicitly used in the script instead.
+  > Note: The current implementation uses `smoothing_factor`. `decay_rate` is ignored unless explicitly used in the script instead.
 
 
 - ### `noise_floor`
 
-**Purpose**:  
-Eliminates tiny, meaningless orientation changes (e.g., sensor jitter or hand tremors) by setting a minimum threshold for motion energy.
+  **Purpose**:  
+  Eliminates tiny, meaningless orientation changes (e.g., sensor jitter or hand tremors) by setting a minimum threshold for motion energy.
 
-**Impact of Values**:
-- **Higher value**: Filters out more small movements; system is less sensitive to fine motion.
-- **Lower value**: Captures smaller movements; may react to unintentional noise.
+  **Impact of Values**:
+  - **Higher value**: Filters out more small movements; system is less sensitive to fine motion.
+  - **Lower value**: Captures smaller movements; may react to unintentional noise.
 
 
 - ### `sensitivity`
 
-**Purpose**:  
-Controls how much the motion energy influences the output. It's a gain multiplier before scaling.
+  **Purpose**:  
+  Controls how much the motion energy influences the output. It's a gain multiplier before scaling.
 
   **Impact of Values**:
   - **Higher value**: Small movements result in larger output changes (volume/tempo); more dramatic response.
