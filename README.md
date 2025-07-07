@@ -135,17 +135,17 @@ Eliminates tiny, meaningless orientation changes (e.g., sensor jitter or hand tr
 **Purpose**:  
 Controls how much the motion energy influences the output. It's a gain multiplier before scaling.
 
-**Impact of Values**:
-- **Higher value**: Small movements result in larger output changes (volume/tempo); more dramatic response.
-- **Lower value**: Requires bigger movements to trigger a response; system feels more "numb".
+  **Impact of Values**:
+  - **Higher value**: Small movements result in larger output changes (volume/tempo); more dramatic response.
+  - **Lower value**: Requires bigger movements to trigger a response; system feels more "numb".
 
 
 - ### `normalisation_factor`
 
-**Purpose**:  
-Defines the maximum expected motion energy for scaling between 0 and 1.
+  **Purpose**:  
+  Defines the maximum expected motion energy for scaling between 0 and 1.
 
-**Impact of Values**:
-- **Higher value**: Narrows the effective output range; motion needs to be more intense to reach full output.
-- - **Lower value**: Expands sensitivity range; less motion can achieve full volume or tempo.
+  **Impact of Values**:
+  - **Higher value**: Narrows the effective output range; motion needs to be more intense to reach full output.
+  - **Lower value**: Expands sensitivity range; less motion can achieve full volume or tempo.
   
