@@ -38,7 +38,7 @@ System software:
 
 ## Setting up (automatic)
 
-- Navigate to Python script folder and make the bash script, `setup.sh` executible: `chmod +x setup.sh`
+- Navigate to Python script folder and make the bash script, `setup.sh` executible: `sudo chmod +x setup.sh`
 - Run the bash script: `./setup.sh`
 
 ## Setting up (manually)
@@ -107,7 +107,6 @@ This controls the weight given to recent motion energy versus past values. It’
 - **Higher value** (closer to 1): Reacts faster to sudden motion; more jittery output.
 - **Lower value** (closer to 0): More stable output; slower to respond to new movements.
 
----
 
 ### `decay_rate`
 
@@ -120,7 +119,6 @@ Controls how quickly the system "forgets" previous motion energy in the decay-ba
 
 > Note: The current implementation uses `smoothing_factor`. `decay_rate` is ignored unless explicitly used in the script instead.
 
----
 
 ### `noise_floor`
 
@@ -131,7 +129,6 @@ Eliminates tiny, meaningless orientation changes (e.g., sensor jitter or hand tr
 - **Higher value**: Filters out more small movements; system is less sensitive to fine motion.
 - **Lower value**: Captures smaller movements; may react to unintentional noise.
 
----
 
 ### `sensitivity`
 
@@ -142,7 +139,6 @@ Controls how much the motion energy influences the output. It's a gain multiplie
 - **Higher value**: Small movements result in larger output changes (volume/tempo); more dramatic response.
 - **Lower value**: Requires bigger movements to trigger a response; system feels more "numb".
 
----
 
 ### `normalisation_factor`
 
