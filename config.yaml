@@ -1,0 +1,14 @@
+playlist: "/home/airadio/music_controller/playlist.xspf"
+
+control_parameters:
+  normalisation_factor: 100.0
+  sensitivity: 3.0
+  smoothing_factor: 0.1
+  decay_rate: 0.2
+  noise_floor: 0.5
+
+output_values:
+  max_volume: 220
+  min_tempo: 0.1
+
+
